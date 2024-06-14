@@ -2,3 +2,6 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-mdc-unelevated-button { border-radius: 7px !important; }
+.mat-mdc-card { margin-top: 2rem; margin-left: 1rem; margin-right: 1rem; box-shadow: none !important; border: 1px solid grey !important; border-radius: 7px !important; }
+.mdc-card__actions { justify-content: end;}
