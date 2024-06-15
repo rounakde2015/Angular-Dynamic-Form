@@ -1,14 +1,8 @@
 <form [formGroup]="formName">
   <mat-form-field>
-    <mat-label>{{datePickerLabel}}</mat-label>
-    <input 
-			matInput 
-			[matDatepicker]="picker"
-		>
-    <mat-datepicker-toggle 
-			matIconSuffix 
-			[for]="picker"
-		></mat-datepicker-toggle>
+    <mat-label>{{ datePickerLabel }}</mat-label>
+    <input matInput [matDatepicker]="picker" />
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
 </form>
