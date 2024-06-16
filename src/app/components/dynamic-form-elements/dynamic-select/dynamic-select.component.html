@@ -1,1 +1,14 @@
-<p>dynamic-select works!</p>
+<form>
+  <mat-form-field>
+    <mat-label>{{ field.label }}</mat-label>
+    <mat-select
+      #dynamicSelect
+      [formControlName]="field.fieldName"
+      (change)="changedValue(dynamicSelect.value)"
+    >
+      @for (option of field.options; track option) {
+        <mat-option [value]="option.value">{{ option.label }}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+</form>
