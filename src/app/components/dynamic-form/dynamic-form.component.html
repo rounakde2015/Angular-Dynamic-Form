@@ -1,0 +1,7 @@
+<form [formGroup]="dynamicFormGroup">
+  <div>
+    @for (field of dynamicFormFields; track field) {
+      <app-dynamic-field [field]="field"></app-dynamic-field>
+    }
+  </div>
+</form>
