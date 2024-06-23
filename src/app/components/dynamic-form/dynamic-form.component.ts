@@ -14,7 +14,7 @@ import {DynamicFieldComponent} from "../dynamic-field/dynamic-field.component";
 })
 export class DynamicFormComponent implements OnInit{
   @Input() model: {};
-  public dynamicFormGroup: FormGroup;
+  public dynamicFormGroup: FormGroup | undefined;
   public dynamicFormFields = [];
 
   ngOnInit(): void {
@@ -38,12 +38,12 @@ export class DynamicFormComponent implements OnInit{
     return formGroupFields;
   }
 
-  private addValidator(rules) {
+  private addValidator(rules: {}) {
     if(!rules) {
       return [];
     }
-    const validators = Object.keys(rules).map((rule) => {
-      switch (rule) {
+    const validators = Object.keys(rules).map(res => {
+      switch (res) {
         case 'required':
           return Validators.required;
           // ... add more validators in future

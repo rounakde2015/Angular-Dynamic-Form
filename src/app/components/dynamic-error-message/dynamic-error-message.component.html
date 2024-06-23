@@ -1,0 +1,9 @@
+@if (formName.controls[fieldName].invalid && (formName.controls[fieldName].dirty || formName.controls[fieldName].touched)) {
+  <div class="alert">
+    @if (formName.controls[fieldName].errors.required) {
+      <div>
+        {{fieldName}}
+      </div>
+    }
+  </div>
+}
